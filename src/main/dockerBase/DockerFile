@@ -1,0 +1,5 @@
+FROM openjdk:19-jdk-alpine
+ENV JAVA_OPTS "-Xmx512m -Xms512m"
+WORKDIR application
+COPY ../../../target/spring5webapp-0.0.1-SNAPSHOT.jar ./
+ENTRYPOINT ["java", "-jar", "spring5webapp-0.0.1-SNAPSHOT.jar"]
